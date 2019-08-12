@@ -1,5 +1,11 @@
-var playlist = {
-  Drake: "Back to Back",
-  Beastie Boys: "Girls",
-  Eminem: "My Name Is "
-};
+var playlist = new Object({keys: '0'});
+
+function updatePlaylist(playlist, artistName, songTitle) {
+  playlist[artistName] = songTitle
+  return playlist
+}
+
+function removeFromPlaylist(playlist, artistName) {
+  delete playlist[artistName]
+  return playlist
+}
